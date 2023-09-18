@@ -24,7 +24,7 @@ int ft_strlen(char *str)
     }
     return (i);
 }
-
+adri tontos
 // int main()
 // {
 //     printf("%d", ft_strlen("hola"));
