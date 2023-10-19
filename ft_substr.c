@@ -12,21 +12,20 @@
 
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *sub;
-    int i;
-    int j;
+	char	*sub;
+	int		i;
+	int		j;
 
 	i = 0;
 	j = 0;
-	sub = (char*) malloc(sizeof(*s) * (len + 1));
-
+	sub = (char *)malloc(sizeof(*s) * (len + 1));
 	if (sub == 0)
 	{
 		return (NULL);
 	}
-	while(s[i])
+	while (s[i])
 	{
 		if (i >= (int)start && j <= (int)len)
 		{
@@ -36,7 +35,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 		i++;
 	}
 	sub[j] = 0;
-	return(sub);
+	return (sub);
 }
 
 // int main()
@@ -57,5 +56,5 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 //         printf("Error al asignar memoria para la subcadena.\n");
 //     }
 
-//     return 0;
+//     return (0);
 // }

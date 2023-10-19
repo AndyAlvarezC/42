@@ -12,19 +12,19 @@
 
 #include "libft.h"
 
-char *ft_strchr(char *cad, int ch)
+char	*ft_strchr(char *cad, int ch)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (cad[i] != '\0')
-    {
-        if (cad[i] == ch)
-        return(cad);
-        else
-        i++;
-    }
-    return NULL;
+	i = 0;
+	while (cad[i] != '\0')
+	{
+		if (cad[i] == ch)
+			return (cad);
+		else
+			i++;
+	}
+	return (NULL);
 }
 
 // int main()
@@ -43,5 +43,5 @@ char *ft_strchr(char *cad, int ch)
 //         printf("No se a encontrado %c\n", caracter);
 //     }
 
-//     return 0;
+//     return (0);
 // }

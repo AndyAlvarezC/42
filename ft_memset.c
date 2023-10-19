@@ -12,19 +12,19 @@
 
 #include "libft.h"
 
-void *ft_memset(void *buf, int ch, size_t cuenta)
+void	*ft_memset(void *buf, int ch, size_t cuenta)
 {
-    size_t i;
-    unsigned char *p = buf;
+	size_t			i;
+	unsigned char	*p;
 
-    i = 0;
-
-    while(i < cuenta)
-    {
-        p[i] = ch;
-        i++;
-    }
-    return (buf);
+	p = buf;
+	i = 0;
+	while (i < cuenta)
+	{
+		p[i] = ch;
+		i++;
+	}
+	return (buf);
 }
 
 // int main()

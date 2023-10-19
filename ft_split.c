@@ -6,13 +6,13 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 22:45:30 by andalvar          #+#    #+#             */
-/*   Updated: 2023/10/18 22:45:30 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/20 01:00:32 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_free(char *strs) //Libera memoria asignada dinamicamente(malloc) para un array de cadenas
+static void	ft_free(char *strs)
 {
 	int	i;
 
@@ -25,7 +25,7 @@ static void	ft_free(char *strs) //Libera memoria asignada dinamicamente(malloc) 
 	free(strs);
 }
 
-static int	ft_count(char *str, char c) //Cuenta la cantidad de palabras de una cadena(str), la cual esta delimitadas por un caracter epecifico(c) y devuelve el rencuento de palabras
+static int	ft_count(char *str, char c)
 {
 	int	i;
 	int	count;
@@ -47,7 +47,7 @@ static int	ft_count(char *str, char c) //Cuenta la cantidad de palabras de una c
 	return (count);
 }
 
-static void	ft_strcpy(char *word, char *str, char c, int j) //Copia una subcadena de la cadena(str) en la cadena(word), hasta que encuentre un caracter especifico(c), o llege al final de la cadena
+static void	ft_strcpy(char *word, char *str, char c, int j)
 {
 	int	i;
 
@@ -62,7 +62,7 @@ static void	ft_strcpy(char *word, char *str, char c, int j) //Copia una subcaden
 	word[i] = '\0';
 }
 
-static char	*ft_stralloc(char *str, char c, int *a) //Asigna memoria dinamicamente para almacenar esa palabra en una nueva cadena y copia una palabra desde una cadena(str) hasta que encuentre el caracter delimitador(c)
+static char	*ft_stralloc(char *str, char c, int *a)
 {
 	char	*word;
 	int		j;
@@ -86,7 +86,7 @@ static char	*ft_stralloc(char *str, char c, int *a) //Asigna memoria dinamicamen
 	return (word);
 }
 
-char **ft_split(char const *s, char c) //Divide una cadena en subcadenas basadas en un caracter delimitador(c) y almacena esas subcadenas en un array de punteros a cadenas (char **strs)
+char	**ft_split(char const *s, char c)
 {
 	char	**strs;
 	int		i;
@@ -114,25 +114,26 @@ char **ft_split(char const *s, char c) //Divide una cadena en subcadenas basadas
 	return (strs);
 }
 
-int main()
-{
-    char const *str = "Hola como estas";
-    char c = ' ';
-	int i;
+// int	main(void)
+// {
+// 	char const	*str;
+// 	char		c;
+// 	int			i;
+// 	char		**result;
 
-
-    char **result = ft_split(str, c);
-	i = 0;
-
-	if (result != NULL) 
-	{
-		while (result[i] != NULL) 
-		{
-			printf("Palabra %d: %s\n", i, result[i]);
-            free(result[i]);
-			i++;
-        }
-        free(result);
-	}
-    return 0;
-}
+// 	str = "Hola como estas";
+// 	c = ' ';
+// 	result = ft_split(str, c);
+// 	i = 0;
+// 	if (result != NULL)
+// 	{
+// 		while (result[i] != NULL)
+// 		{
+// 			printf("Palabra %d: %s\n", i, result[i]);
+// 			free(result[i]);
+// 			i++;
+// 		}
+// 		free(result);
+// 	}
+// 	return (0);
+// }

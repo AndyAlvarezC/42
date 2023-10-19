@@ -12,17 +12,16 @@
 
 #include "libft.h"
 
-size_t ft_strlen(char *cad)
+size_t	ft_strlen(char *cad)
 {
-    int i;
+	int	i;
 
-    i = 0;
-
-    while(cad[i] != '\0')
-    {
-        i++;
-    }
-    return (i);
+	i = 0;
+	while (cad[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
 
 // int main()

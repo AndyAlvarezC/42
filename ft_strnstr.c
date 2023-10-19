@@ -16,21 +16,19 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 {
 	unsigned int	i;
 
-    if (!*to_find)
-        return ((char *)str);
-    else if (!n)
-        return (NULL);
-        
-    if(*to_find == 0 || str == to_find)
-            return ((char *)str);
-
+	if (!*to_find)
+		return ((char *)str);
+	else if (!n)
+		return (NULL);
+	if (*to_find == 0 || str == to_find)
+		return ((char *)str);
 	i = ft_strlen((char *)to_find);
 	if (!*to_find)
 		return ((char *)str);
 	while (*str && i <= n--)
 	{
-			if (!(ft_strncmp((char *)str, (char *)to_find, n)))
-                return ((char *)str);
+		if (!(ft_strncmp((char *)str, (char *)to_find, n)))
+			return ((char *)str);
 		str++;
 	}
 	return (0);

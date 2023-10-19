@@ -12,21 +12,21 @@
 
 #include "libft.h"
 
-int ft_memcmp(const void *buf1, const void *buf2, size_t cuenta)
+int	ft_memcmp(const void *buf1, const void *buf2, size_t cuenta)
 {
-    const unsigned char *str1 = buf1;
-    const unsigned char *str2 = buf2;
-    size_t i;
+	const unsigned char	*str1 = buf1;
+	const unsigned char	*str2 = buf2;
+	size_t				i;
 
-    i = 0;
-    while(i <= cuenta)
-    {
-        if(str1[i] == str2[i])
-        i++;
-        if(str1[i] == str2[i] && str1[i] == '\0' && str2[i] == '\0')
-        return(0);
-    }
-    return(str1[i] - str2[i]);
+	i = 0;
+	while (i <= cuenta)
+	{
+		if (str1[i] == str2[i])
+			i++;
+		if (str1[i] == str2[i] && str1[i] == '\0' && str2[i] == '\0')
+			return (0);
+	}
+	return (str1[i] - str2[i]);
 }
 
 // int main()
@@ -49,5 +49,5 @@ int ft_memcmp(const void *buf1, const void *buf2, size_t cuenta)
 //         printf("%d \n");
 //     }
 
-//     return 0;
+//     return (0);
 // }

@@ -11,9 +11,10 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+
 //#include "ft_strlen.c"
 
-char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	int		i;
 	int		j;
@@ -32,17 +33,15 @@ char *ft_strdup(const char *s)
 }
 
 /*int main() {
-    const char *original = "Hola, mundo!";
-    char *copia = ft_strdup(original);
+	const char *original = "Hola, mundo!";
+	char *copia = ft_strdup(original);
 
-    if (copia != NULL) {
-        printf("Copia: %s\n", copia);
-        free(copia); // Liberar la memoria asignada dinámicamente
-    } else {
-        printf("No se pudo duplicar la cadena.\n");
-    }
+	if (copia != NULL) {
+		printf("Copia: %s\n", copia);
+		free(copia); // Liberar la memoria asignada dinámicamente
+	} else {
+		printf("No se pudo duplicar la cadena.\n");
+	}
 
-    return 0;
+	return (0);
 }*/
-
-

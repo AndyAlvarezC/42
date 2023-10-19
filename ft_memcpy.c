@@ -12,20 +12,20 @@
 
 #include "libft.h"
 
-void *ft_memcpy(void *dest, const void *src, size_t cuenta)
+void	*ft_memcpy(void *dest, const void *src, size_t cuenta)
 {
-    int i;
-    unsigned char *p = dest;
-    const unsigned char *a = src;
+	int					i;
+	unsigned char		*p;
+	const unsigned char	*a = src;
 
-    i = 0;
-
-    while((size_t)i < cuenta)
-    {
-        p[i] = a[i];
-        i++;
-    }
-    return(dest);
+	p = dest;
+	i = 0;
+	while ((size_t)i < cuenta)
+	{
+		p[i] = a[i];
+		i++;
+	}
+	return (dest);
 }
 
 // int main()

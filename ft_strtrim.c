@@ -6,7 +6,7 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 19:41:13 by andalvar          #+#    #+#             */
-/*   Updated: 2023/10/17 19:41:13 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/20 00:55:45 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 //     if (trimmed) {
 //         printf("Cadena recortada: \"%s\"\n", trimmed);
 //         free(trimmed);
-//     } else {
-//         printf("Error: No se pudo asignar memoria para la cadena recortada.\n");
 //     }
-
-//     return 0;
+//     return (0);
 // }
-
-
-
-

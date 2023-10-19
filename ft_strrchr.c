@@ -12,23 +12,23 @@
 
 #include "libft.h"
 
-char *ft_strrchr(const char *str, int ch)
+char	*ft_strrchr(const char *str, int ch)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (str[i] != '\0')
-    {
-        i++;
-    }
-    while (i >= 0)
-    {
-        if (str[i] == ch)
-        return((char *)str);
-        else
-        i--;
-    }
-    return NULL;
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	while (i >= 0)
+	{
+		if (str[i] == ch)
+			return ((char *)str);
+		else
+			i--;
+	}
+	return (NULL);
 }
 
 // int main()
@@ -44,5 +44,5 @@ char *ft_strrchr(const char *str, int ch)
 //         printf("No se encontró '%c' en la cadena.\n", caracter);
 //     }
 
-//     return 0;
+//     return (0);
 // }

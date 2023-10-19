@@ -12,15 +12,15 @@
 
 #include "libft.h"
 
-int ft_toupper(int ch)
+int	ft_toupper(int ch)
 {
-    if (ch >= 'a' && ch <= 'z')
-        ch -= 32;
-    return(ch);
+	if (ch >= 'a' && ch <= 'z')
+		ch -= 32;
+	return (ch);
 }
 
 // int main()
-// { 
+// {
 //     printf("%c", ft_toupper('a'));
 //     return (0);
 // }
