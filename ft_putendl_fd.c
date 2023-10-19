@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 18:59:10 by andalvar          #+#    #+#             */
-/*   Updated: 2023/09/13 18:59:10 by andalvar         ###   ########.fr       */
+/*   Created: 2023/10/17 20:19:53 by andalvar          #+#    #+#             */
+/*   Updated: 2023/10/17 20:19:53 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(char *cad)
+void ft_putendl_fd(char *s, int fd)
 {
-    int i;
-
-    i = 0;
-
-    while(cad[i] != '\0')
-    {
-        i++;
-    }
-    return (i);
+    ft_putstr_fd(s, fd);
+    ft_putchar_fd('\n', fd);
 }
 
 // int main()
 // {
-//     printf("%d", ft_strlen("hola"));
+// 	char *a = "Hola";
+// 	ft_putendl_fd(a, 2);
 // }

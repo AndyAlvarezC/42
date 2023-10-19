@@ -1,53 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 11:57:08 by andalvar          #+#    #+#             */
-/*   Updated: 2023/09/14 11:57:08 by andalvar         ###   ########.fr       */
+/*   Created: 2023/09/18 20:59:16 by andalvar          #+#    #+#             */
+/*   Updated: 2023/09/18 20:59:16 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int ft_strlen(char *cad)
+char *ft_strchr(char *cad, int ch)
 {
     int i;
 
     i = 0;
-
-    while(cad[i] != '\0')
+    while (cad[i] != '\0')
     {
+        if (cad[i] == ch)
+        return(cad);
+        else
         i++;
     }
-    return (i);
+    return NULL;
 }
 
-size_t ft_strlcpy(char *dest, const char *src, size_t size)
-{
-	unsigned int	a;
-	unsigned int	i;
-
-	a = ft_strlen(src);
-	i = 0;
-	if (size != 0)
-	{
-		while (src[i] != '\0' && i < size - 1)
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		dest[i] = '\0';
-	}
-	return (a);
-}
-
-// int	main(void)
+// int main()
 // {
-// 	char	src[] = "Hola";
-// 	char	dest[] = "Adios";
+//     char *cad = "Adios";
+//     char caracter = 'd';
 
-// 	printf("%d | %s\n", ft_strlcpy(dest, src, 5), dest);
+//     char *resultado = ft_strchr(cad, caracter);
+
+//     if (resultado != NULL)
+//     {
+//         printf("Se a encontrado %c\n", caracter, resultado - cad);
+//     }
+//     else
+//     {
+//         printf("No se a encontrado %c\n", caracter);
+//     }
+
+//     return 0;
 // }

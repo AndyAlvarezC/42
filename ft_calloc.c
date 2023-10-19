@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 18:59:10 by andalvar          #+#    #+#             */
-/*   Updated: 2023/09/13 18:59:10 by andalvar         ###   ########.fr       */
+/*   Created: 2023/09/19 21:13:49 by andalvar          #+#    #+#             */
+/*   Updated: 2023/09/19 21:13:49 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include "ft_bzero.c"
 
-size_t ft_strlen(char *cad)
+void	*ft_calloc(size_t num, size_t size)
 {
-    int i;
+	void	*resultado;
 
-    i = 0;
-
-    while(cad[i] != '\0')
-    {
-        i++;
-    }
-    return (i);
+	resultado = malloc(num * size);
+	
+	if (!resultado)
+	{
+		return (NULL);
+	}
+	else
+	{
+		ft_bzero(resultado, (num * size));
+		return (resultado);
+	}
 }
-
-// int main()
-// {
-//     printf("%d", ft_strlen("hola"));
-// }

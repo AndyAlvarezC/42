@@ -14,33 +14,42 @@
 
 void *ft_memmove(void *dest, const void *src, size_t n)
 {
-    int i;
-    unsigned char *p = dest;
-    const unsigned char *a = src;
-    char temp;
+	size_t	longitud;
 
-    i = 0;
-
-    while(i < n)
-    {
-    }
+	longitud = 0;
+	if (src < dest)
+	{
+		longitud = n;
+		while (longitud > 0)
+		{
+			longitud--;
+			((unsigned char *)dest)[longitud] = ((unsigned char *)src)[longitud];
+		}
+	}
+	else
+	{
+		longitud = 0;
+		while (longitud < n)
+		{
+			((unsigned char *)dest)[longitud] = ((unsigned char *)src)[longitud];
+			longitud++;
+		}
+	}
+	return (dest);
 }
 
+/*int main() {
+    char source[] = "Hello, World!";
+    char destination[15];
 
-#include <stdio.h>
-#include <string.h>
+    ft_memmove(destination, source, 9);
 
-int main()
-{
-    char src[] = "Hola, mundo";
-    char dest[10];
+    printf("%s\n", destination);
 
-    ft_memmove(dest, src, 5);
-    printf("%s\n", dest);
 
-    char str[] = "Hola, mundo!";
-    memmove(str + 7, str + 1, 5);
-    printf("%s\n", str);
+    char str[] = "Hello, World!";
+    memmove(str + 7, str + 1, 5); // Copia "World" desde la posición 1 a la posición 7
+    printf("%s\n", str); // Imprime "HWorld, World!"
+    return 0;
+}*/
 
-    return (0);
-}

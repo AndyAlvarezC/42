@@ -25,6 +25,7 @@ void *ft_memcpy(void *dest, const void *src, size_t cuenta)
         p[i] = a[i];
         i++;
     }
+    return(dest);
 }
 
 // int main()
@@ -32,8 +33,8 @@ void *ft_memcpy(void *dest, const void *src, size_t cuenta)
 //     char src[] = "Hola";
 //     char dest[10];
 
-//     ft_memcpy(dest, src, 6);
-//     printf("Buffer: %s\n", dest);
+//     ft_memcpy(dest, src, 3);
+//     printf("%s\n", dest);
 
 //     return (0);
 // }

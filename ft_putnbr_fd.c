@@ -1,31 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 18:59:10 by andalvar          #+#    #+#             */
-/*   Updated: 2023/09/13 18:59:10 by andalvar         ###   ########.fr       */
+/*   Created: 2023/10/17 20:11:25 by andalvar          #+#    #+#             */
+/*   Updated: 2023/10/17 20:11:25 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(char *cad)
+void ft_putchar_fd(char c, int fd)
 {
-    int i;
+	write(fd, &c, 1);
+}
 
-    i = 0;
-
-    while(cad[i] != '\0')
-    {
-        i++;
-    }
-    return (i);
+void ft_putnbr_fd(int n, int fd)
+{
+	if (n == -2147483648)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putchar_fd('2', fd);
+		ft_putnbr_fd(147483648, fd);
+		return ;
+	}
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n = -n;
+	}
+	if (n >= 10)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		n = n % 10;
+	}
+	if (n < 10)
+	{
+		ft_putchar_fd(n + 48, fd);
+	}
 }
 
 // int main()
 // {
-//     printf("%d", ft_strlen("hola"));
+//     ft_putnbr_fd(42, 2);
+//     return (0);
 // }

@@ -26,7 +26,7 @@ int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
 
-int ft_strlen(char *str)
+size_t ft_strlen(char *str)
 {
     int i;
 
@@ -63,11 +63,11 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 }
 
 // int main () {
-//     const char str[20] = "TutorialsPoint";
+//     const char str[20] = "TutorialsPoin";
 //     const char find[10] = "to";
 //     char *result;
 
 //     result = ft_strnstr(str, find, 4);
-//     printf("The substring is: %s\n", result);
+//     printf("%s\n", result);
 //     return(0);
 // }

@@ -1,53 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 11:57:08 by andalvar          #+#    #+#             */
-/*   Updated: 2023/09/14 11:57:08 by andalvar         ###   ########.fr       */
+/*   Created: 2023/10/18 18:24:58 by andalvar          #+#    #+#             */
+/*   Updated: 2023/10/18 18:24:58 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int ft_strlen(char *cad)
+void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
     int i;
 
     i = 0;
-
-    while(cad[i] != '\0')
+    while(s[i] = '\0')
     {
+        f(i, s[i]);
         i++;
     }
-    return (i);
 }
-
-size_t ft_strlcpy(char *dest, const char *src, size_t size)
-{
-	unsigned int	a;
-	unsigned int	i;
-
-	a = ft_strlen(src);
-	i = 0;
-	if (size != 0)
-	{
-		while (src[i] != '\0' && i < size - 1)
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		dest[i] = '\0';
-	}
-	return (a);
-}
-
-// int	main(void)
-// {
-// 	char	src[] = "Hola";
-// 	char	dest[] = "Adios";
-
-// 	printf("%d | %s\n", ft_strlcpy(dest, src, 5), dest);
-// }

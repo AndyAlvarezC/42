@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void *ft_memset(void *buf, int c, size_t cuenta)
+void *ft_memset(void *buf, int ch, size_t cuenta)
 {
     int i;
     unsigned char *p = buf;
@@ -21,7 +21,7 @@ void *ft_memset(void *buf, int c, size_t cuenta)
 
     while(i < cuenta)
     {
-        p[i] = c;
+        p[i] = ch;
         i++;
     }
 }
@@ -30,7 +30,7 @@ void *ft_memset(void *buf, int c, size_t cuenta)
 // {
 //     char buf[] = "Hola";
 
-//     ft_memset(buf, 'a', 8);
+//     ft_memset(buf, 'u', 13);
 //     printf("Buffer: %s\n", buf);
 
 //     return (0);

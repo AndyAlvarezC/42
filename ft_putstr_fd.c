@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 18:59:10 by andalvar          #+#    #+#             */
-/*   Updated: 2023/09/13 18:59:10 by andalvar         ###   ########.fr       */
+/*   Created: 2023/10/17 20:00:34 by andalvar          #+#    #+#             */
+/*   Updated: 2023/10/17 20:00:34 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(char *cad)
+void ft_putstr_fd(char *s, int fd)
 {
-    int i;
+	int	a;
 
-    i = 0;
-
-    while(cad[i] != '\0')
-    {
-        i++;
-    }
-    return (i);
+	a = 0;
+	while (s[a] != '\0')
+	{
+		write(fd, &s[a], 1);
+		a++;
+	}
 }
 
 // int main()
 // {
-//     printf("%d", ft_strlen("hola"));
+// 	char *a = "Hola";
+// 	ft_putstr_fd(a, 2);
 // }

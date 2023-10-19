@@ -12,32 +12,44 @@
 
 #include "libft.h"
 
-char	*ft_strlcat(char *dest, char *src, size_t size)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
-	{
-		i++;
-	}
-	while (src[j] != '\0' && j < size)
-	{
-		dest[i] = src[j];
-		j++;
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+unsigned int ft_strlen(char *cad) {
+    int i = 0;
+    while (cad[i] != '\0') {
+        i++;
+    }
+    return (i);
 }
 
-// int main()
-// {
-// 	char dest[15] = "Destino";
-// 	char src[] = " Adios";
+size_t ft_strlcat(char *dst, const char *src, size_t size) {
+    size_t i = 0;
+    size_t j = 0;
 
-// 	ft_strlcat(dest, src, 3);
-// 	printf("%s \n", dest);
+    while (dst[i] != '\0' && i < size) {
+        i++;
+    }
+
+    size_t espacio = size - i - 1;
+
+    while (src[j] != '\0' && j < espacio) {
+        dst[i] = src[j];
+        i++;
+        j++;
+    }
+
+    dst[i] = '\0';
+
+    size_t longitud = i + ft_strlen(src);
+
+    return (longitud);
+}
+
+// int main() {
+//     char dst[20] = "Destino";
+//     char src[] = " Adios";
+//     size_t longitud = ft_strlcat(dst, src, sizeof(dst));
+
+//     printf("%s \n", dst);
+//     printf("%zu ", longitud);
+//     return (0);
 // }
+

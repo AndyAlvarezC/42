@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 18:59:10 by andalvar          #+#    #+#             */
-/*   Updated: 2023/09/13 18:59:10 by andalvar         ###   ########.fr       */
+/*   Created: 2023/09/18 20:43:55 by andalvar          #+#    #+#             */
+/*   Updated: 2023/09/18 20:43:55 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(char *cad)
+int ft_toupper(int ch)
 {
-    int i;
-
-    i = 0;
-
-    while(cad[i] != '\0')
-    {
-        i++;
-    }
-    return (i);
+    if (ch >= 'a' && ch <= 'z')
+        ch -= 32;
+        return(ch);
 }
 
 // int main()
-// {
-//     printf("%d", ft_strlen("hola"));
+// { 
+//     printf("%c", ft_toupper('a'));
+//     return (0);
 // }
