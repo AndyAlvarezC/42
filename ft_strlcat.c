@@ -12,14 +12,6 @@
 
 #include "libft.h"
 
-unsigned int ft_strlen(char *cad) {
-    int i = 0;
-    while (cad[i] != '\0') {
-        i++;
-    }
-    return (i);
-}
-
 size_t ft_strlcat(char *dst, const char *src, size_t size) {
     size_t i = 0;
     size_t j = 0;
@@ -38,7 +30,7 @@ size_t ft_strlcat(char *dst, const char *src, size_t size) {
 
     dst[i] = '\0';
 
-    size_t longitud = i + ft_strlen(src);
+    size_t longitud = i + ft_strlen((char *)src);
 
     return (longitud);
 }

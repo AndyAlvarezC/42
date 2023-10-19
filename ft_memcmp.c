@@ -16,7 +16,7 @@ int ft_memcmp(const void *buf1, const void *buf2, size_t cuenta)
 {
     const unsigned char *str1 = buf1;
     const unsigned char *str2 = buf2;
-    int i;
+    size_t i;
 
     i = 0;
     while(i <= cuenta)
@@ -25,9 +25,8 @@ int ft_memcmp(const void *buf1, const void *buf2, size_t cuenta)
         i++;
         if(str1[i] == str2[i] && str1[i] == '\0' && str2[i] == '\0')
         return(0);
-        else
-        return(str1[i] - str2[i]);
     }
+    return(str1[i] - str2[i]);
 }
 
 // int main()

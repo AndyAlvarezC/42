@@ -12,25 +12,12 @@
 
 #include "libft.h"
 
-unsigned int ft_strlen(char *cad)
-{
-    int i;
-
-    i = 0;
-
-    while(cad[i] != '\0')
-    {
-        i++;
-    }
-    return (i);
-}
-
 size_t ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	unsigned int	a;
 	unsigned int	i;
 
-	a = ft_strlen(src);
+	a = ft_strlen((char *)src);
 	i = 0;
 	if (size != 0)
 	{

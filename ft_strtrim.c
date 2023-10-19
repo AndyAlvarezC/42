@@ -12,53 +12,6 @@
 
 #include "libft.h"
 
-// size_t ft_strlcpy(char *dest, const char *src, size_t size)
-// {
-// 	unsigned int	a;
-// 	unsigned int	i;
-
-// 	a = ft_strlen(src);
-// 	i = 0;
-// 	if (size != 0)
-// 	{
-// 		while (src[i] != '\0' && i < size - 1)
-// 		{
-// 			dest[i] = src[i];
-// 			i++;
-// 		}
-// 		dest[i] = '\0';
-// 	}
-// 	return (a);
-// }
-
-// char *ft_strchr(char *cad, int ch)
-// {
-//     int i;
-
-//     i = 0;
-//     while (cad[i] != '\0')
-//     {
-//         if (cad[i] == ch)
-//         return(cad);
-//         else
-//         i++;
-//     }
-//     return NULL;
-// }
-
-// size_t ft_strlen(char *cad)
-// {
-//     int i;
-
-//     i = 0;
-
-//     while(cad[i] != '\0')
-//     {
-//         i++;
-//     }
-//     return (i);
-// }
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
@@ -69,10 +22,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (s1 != 0 && set != 0)
 	{
 		i = 0;
-		j = ft_strlen(s1);
-		while (s1[i] && ft_strchr(set, s1[i]))
+		j = ft_strlen((char *)s1);
+		while (s1[i] && ft_strchr((char *)set, s1[i]))
 			i++;
-		while (s1[j - 1] && ft_strchr(set, s1[j - 1]) && j > i)
+		while (s1[j - 1] && ft_strchr((char *)set, s1[j - 1]) && j > i)
 			j--;
 		str = (char *)malloc(sizeof(char) * (j - i + 1));
 		if (str)

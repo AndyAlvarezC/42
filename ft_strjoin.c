@@ -12,19 +12,6 @@
 
 #include "libft.h"
 
-// size_t ft_strlen(char *cad)
-// {
-//     int i;
-
-//     i = 0;
-
-//     while(cad[i] != '\0')
-//     {
-//         i++;
-//     }
-//     return (i);
-// }
-
 char *ft_strjoin(char const *s1, char const *s2)
 {
     int i;
@@ -33,7 +20,7 @@ char *ft_strjoin(char const *s1, char const *s2)
 
     i = 0;
     j = 0;
-    s3 = (char *) malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+    s3 = (char *) malloc(sizeof(char) * (ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1));
     if (s3 == NULL)
     {
         return (NULL);

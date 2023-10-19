@@ -14,7 +14,7 @@
 
 void *ft_memset(void *buf, int ch, size_t cuenta)
 {
-    int i;
+    size_t i;
     unsigned char *p = buf;
 
     i = 0;
@@ -24,6 +24,7 @@ void *ft_memset(void *buf, int ch, size_t cuenta)
         p[i] = ch;
         i++;
     }
+    return (buf);
 }
 
 // int main()

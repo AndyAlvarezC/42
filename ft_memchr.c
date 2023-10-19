@@ -15,13 +15,13 @@
 void *ft_memchr(const void *buffer, int ch, size_t cuenta)
 {
     const unsigned char *src = buffer;
-    int i;
+    size_t i;
 
     i = 0;
         while(i <= cuenta)
         {
-            if (src[i] == ch)
-                return(src);
+            if(src[i] == ch)
+                return (void *)(src + i);
             else
                 i++;
         }
@@ -30,18 +30,19 @@ void *ft_memchr(const void *buffer, int ch, size_t cuenta)
 
 // int main()
 // {
-//     const char buffer[] = "Hello, World!";
-//     int ch = 'e';
+//     const char *cadena = "Hello, World!";
+//     char caracter_a_buscar = 'W';
+//     size_t longitud = strlen(cadena);
 
-//     void *resultado = ft_memchr(buffer, ch, sizeof(buffer));
+//     void *resultado = ft_memchr(cadena, caracter_a_buscar, longitud);
 
 //     if (resultado != NULL)
 //     {
-//         printf("Caracter encontrado\n", (unsigned long)((unsigned char *)result - (unsigned char *)buffer));
+//         printf("El carácter '%c' se encontró en la posición %ld.\n", caracter_a_buscar, (char *)resultado - cadena);
 //     }
 //     else
 //     {
-//         printf("Caracter no encontrado.\n");
+//         printf("El carácter '%c' no se encontró en la cadena.\n", caracter_a_buscar);
 //     }
 
 //     return 0;

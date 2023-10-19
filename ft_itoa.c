@@ -32,10 +32,11 @@ static unsigned int	ft_size(int num)
 char *ft_itoa(int n)
 {
 	char *s1;
-	unsigned int num;
+	int num;
 	unsigned int len;
 
 	len = ft_size(n);
+	num = 0;
 	s1 = (char *) malloc(sizeof(char) * (len + 1));
 	if (s1 == NULL)
 		return (NULL);
