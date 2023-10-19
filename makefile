@@ -25,12 +25,12 @@ all: $(NAME)
 
 $(NAME): $(OBJ) $(INCLUDE)
 	$(LIB) $(NAME) $(OBJ)
-	
+
 %.o: %.c
 	$(CC) $(CCFLAGS) -c -o $@ $<
 
 clean:
-	$(RM) $(OBJ) $(BONUSOBJ)
+	$(RM) $(OBJ)
 
 fclean: clean
 	$(RM) $(NAME)
