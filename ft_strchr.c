@@ -6,41 +6,40 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 20:59:16 by andalvar          #+#    #+#             */
-/*   Updated: 2023/09/18 20:59:16 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/20 20:48:11 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(char *cad, int ch)
+char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
+	if (!s)
+		return (NULL);
 	i = 0;
-	while (cad[i] != '\0')
+	while (s[i])
 	{
-		if (cad[i] == ch)
-			return (cad);
-		else
-			i++;
+		if (s[i] == (char)c)
+			return ((char *)(s + i));
+		i++;
 	}
+	if (s[i] == (char)c)
+		return ((char *)(s + i));
 	return (NULL);
 }
 
-// int main()
-// {
-//     char *cad = "Adios";
-//     char caracter = 'd';
+// int main() {
+//     const char *s = "Hello, World!";
+//     int character = 'o';
 
-//     char *resultado = ft_strchr(cad, caracter);
+//     char *result = ft_strchr(s, character);
 
-//     if (resultado != NULL)
-//     {
-//         printf("Se a encontrado %c\n", caracter, resultado - cad);
-//     }
-//     else
-//     {
-//         printf("No se a encontrado %c\n", caracter);
+//     if (result) {
+//         printf("Se a encontrado '%c' en la cadena: %s\n", character, result);
+//     } else {
+//         printf("No encontrado'%c'\n", character);
 //     }
 
 //     return (0);

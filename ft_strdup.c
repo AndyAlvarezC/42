@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ strdup.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 21:40:08 by andalvar          #+#    #+#             */
-/*   Updated: 2023/09/19 21:40:08 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/20 22:16:32 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,15 @@ char	*ft_strdup(const char *s)
 	return (str);
 }
 
-/*int main() {
-	const char *original = "Hola, mundo!";
-	char *copia = ft_strdup(original);
+// int main() {
+// 	const char *original = "Hola, mundo!";
+// 	char *copia = ft_strdup(original);
 
-	if (copia != NULL) {
-		printf("Copia: %s\n", copia);
-		free(copia); // Liberar la memoria asignada dinámicamente
-	} else {
-		printf("No se pudo duplicar la cadena.\n");
-	}
-
-	return (0);
-}*/
+// 	if (copia != NULL) {
+// 		printf("Copia: %s\n", copia);
+// 		free(copia);
+// 	} else {
+// 		printf("No se pudo duplicar la cadena.\n");
+// 	}
+// 	return (0);
+// }

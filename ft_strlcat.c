@@ -6,7 +6,7 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 12:06:16 by andalvar          #+#    #+#             */
-/*   Updated: 2023/09/14 12:06:16 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/20 22:21:37 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,19 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	j;
-	size_t	espacio;
-	size_t	longitud;
 
 	i = 0;
 	j = 0;
-	while (dst[i] != '\0' && i < size)
-	{
+	while (dst[i] && i < size)
 		i++;
-	}
-	espacio = size - i - 1;
-	while (src[j] != '\0' && j < espacio)
+	while (src[j] && (i + j + 1) < size)
 	{
-		dst[i] = src[j];
-		i++;
+		dst[i + j] = src[j];
 		j++;
 	}
-	dst[i] = '\0';
-	longitud = i + ft_strlen((char *)src);
-	return (longitud);
+	if (i < size)
+		dst[i + j] = '\0';
+	return (i + ft_strlen((char *)src));
 }
 
 // int main() {

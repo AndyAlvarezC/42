@@ -6,48 +6,47 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 13:07:14 by andalvar          #+#    #+#             */
-/*   Updated: 2023/09/19 13:07:14 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/20 21:06:09 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *buf1, const void *buf2, size_t cuenta)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const unsigned char	*str1 = buf1;
-	const unsigned char	*str2 = buf2;
+	const unsigned char	*str1 = s1;
+	const unsigned char	*str2 = s2;
 	size_t				i;
 
 	i = 0;
-	while (i <= cuenta)
+	while (i < n)
 	{
-		if (str1[i] == str2[i])
-			i++;
-		if (str1[i] == str2[i] && str1[i] == '\0' && str2[i] == '\0')
-			return (0);
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
+		i++;
 	}
-	return (str1[i] - str2[i]);
+	return (0);
 }
 
-// int main()
+// int	main(void)
 // {
-//     char str1[] = "Haola";
-//     char str2[] = "Hcola";
+// 	char str1[] = "Haola";
+// 	char str2[] = "Hbola";
 
-//     int resultado = ft_memcmp(str1, str2, 4);
+// 	int resultado = ft_memcmp(str1, str2, 4);
 
-//     if (resultado == 0)
-//     {
-//         printf("Son iguales.\n");
-//     }
-//     else if (resultado < 0)
-//     {
-//         printf("%d \n");
-//     }
-//     else
-//     {
-//         printf("%d \n");
-//     }
+// 	if (resultado == 0)
+// 	{
+// 		printf("Son iguales.\n");
+// 	}
+// 	else if (resultado < 0)
+// 	{
+// 		printf("%d \n");
+// 	}
+// 	else
+// 	{
+// 		printf("%d \n");
+// 	}
 
-//     return (0);
+// 	return (0);
 // }

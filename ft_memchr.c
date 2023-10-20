@@ -6,22 +6,22 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 13:06:46 by andalvar          #+#    #+#             */
-/*   Updated: 2023/10/20 01:05:24 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/20 21:27:46 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *buffer, int ch, size_t cuenta)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const unsigned char	*src = buffer;
+	const unsigned char	*src = s;
 	size_t				i;
 
 	i = 0;
-	while (i <= cuenta)
+	while (i < n)
 	{
-		if (src[i] == ch)
-			return ((void *)(src + i));
+		if (src[i] == c)
+			return ((char *)src + i);
 		else
 			i++;
 	}
@@ -30,19 +30,20 @@ void	*ft_memchr(const void *buffer, int ch, size_t cuenta)
 
 // int main()
 // {
-//     const char *cadena = "Hello, World!";
-//     char buscar = 'W';
-//     size_t longitud = strlen(cadena);
+//     const char *str = "Hello, World!";
+//     char target = 'W';
+//     size_t n = strlen(str);
 
-//     void *resultado = ft_memchr(cadena, buscar, longitud);
+//     void *result = ft_memchr(str, target, n);
 
-//     if (resultado != NULL)
+//     if (result != NULL)
 //     {
-//         printf(" '%c'  %ld.\n", buscar, (char *)resultado - cadena);
+//         printf("Se encontro '%c' en %ld.\n", target, (char *)result - str);
 //     }
 //     else
 //     {
-//         printf("'%c' .\n", caracter_a_buscar);
+//         printf("El carácter '%c' no se encontró.\n", target);
 //     }
+
 //     return (0);
 // }

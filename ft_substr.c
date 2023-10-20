@@ -6,7 +6,7 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 17:03:46 by andalvar          #+#    #+#             */
-/*   Updated: 2023/10/17 17:03:46 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/20 14:33:22 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,18 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
+	size_t	i;
+	size_t	j;
 	char	*sub;
-	int		i;
-	int		j;
 
-	i = 0;
-	j = 0;
 	sub = (char *)malloc(sizeof(*s) * (len + 1));
 	if (sub == 0)
-	{
 		return (NULL);
-	}
-	while (s[i])
+	i = 0;
+	j = 0;
+	while (s[i] && j < len)
 	{
-		if (i >= (int)start && j <= (int)len)
+		if (i >= start && j < len)
 		{
 			sub[j] = s[i];
 			j++;
@@ -38,23 +36,18 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (sub);
 }
 
-// int main()
+// int	main(void)
 // {
-//     char src[] = "Hello World!";
-//     unsigned int start = 5;
-//     size_t len = 3;
+// 	char src[] = "Hello World!";
+// 	unsigned int start = 5;
+// 	size_t len = 3;
 
-//     char *sub = ft_substr(src, start, len);
+// 	char *sub = ft_substr(src, start, len);
 
-//     if (sub != NULL)
-//     {
-//         printf("%s\n", sub);
-//         free(sub);
-//     }
-//     else
-//     {
-//         printf("Error al asignar memoria para la subcadena.\n");
-//     }
-
-//     return (0);
+// 	if (sub != NULL)
+// 	{
+// 		printf("%s\n", sub);
+// 		free(sub);
+// 	}
+// 	return (0);
 // }
