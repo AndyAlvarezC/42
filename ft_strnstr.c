@@ -6,41 +6,41 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 14:22:03 by andalvar          #+#    #+#             */
-/*   Updated: 2023/10/20 23:04:59 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/21 19:26:15 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *str, const char *to_find, size_t n)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	unsigned int	i;
 
-	if (!*to_find)
-		return ((char *)str);
-	else if (!n)
+	if (!*needle)
+		return ((char *)haystack);
+	else if (!len)
 		return (NULL);
-	if (*to_find == 0 || str == to_find)
-		return ((char *)str);
-	i = ft_strlen((char *)to_find);
-	if (!*to_find)
-		return ((char *)str);
-	while (*str && i <= n)
+	if (*needle == 0 || haystack == needle)
+		return ((char *)haystack);
+	i = ft_strlen((char *)needle);
+	if (!*needle)
+		return ((char *)haystack);
+	while (*haystack && i <= len)
 	{
-		if (!(ft_strncmp((char *)str, (char *)to_find, i)))
-			return ((char *)str);
-		str++;
-		n--;
+		if (!(ft_strncmp((char *)haystack, (char *)needle, i)))
+			return ((char *)haystack);
+		haystack++;
+		len--;
 	}
 	return (0);
 }
 
 // int main () {
-//     const char str[20] = "TutorialsPoin";
+//     const char haystack[20] = "TutorialsPoin";
 //     const char find[10] = "to";
 //     char *result;
 
-//     result = ft_strnstr(str, find, 4);
+//     result = ft_strnstr(haystack, find, 4);
 //     printf("%s\n", result);
 //     return(0);
 // }

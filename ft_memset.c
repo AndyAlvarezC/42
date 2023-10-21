@@ -6,25 +6,25 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 18:51:31 by andalvar          #+#    #+#             */
-/*   Updated: 2023/09/13 18:51:31 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/21 18:51:05 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *buf, int ch, size_t cuenta)
+void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t			i;
 	unsigned char	*p;
 
-	p = buf;
+	p = b;
 	i = 0;
-	while (i < cuenta)
+	while (i < len)
 	{
-		p[i] = ch;
+		p[i] = c;
 		i++;
 	}
-	return (buf);
+	return (b);
 }
 
 // int main()

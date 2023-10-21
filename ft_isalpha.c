@@ -6,7 +6,7 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 18:36:16 by andalvar          #+#    #+#             */
-/*   Updated: 2023/09/13 18:36:16 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/21 18:43:24 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ int	ft_isalpha(int c)
 
 // int main()
 // {
-//     printf("Caracter: %d", ft_isalpha('0'));
+//     printf("Caracter: %d", ft_isalpha('a'));
 // }

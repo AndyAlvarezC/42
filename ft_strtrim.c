@@ -6,13 +6,13 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 19:41:13 by andalvar          #+#    #+#             */
-/*   Updated: 2023/10/20 00:55:45 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/21 19:34:55 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(const char *s1, const char *set)
 {
 	size_t	i;
 	size_t	j;
