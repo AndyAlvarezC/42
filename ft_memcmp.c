@@ -6,7 +6,7 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 13:07:14 by andalvar          #+#    #+#             */
-/*   Updated: 2023/10/21 19:21:24 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/21 21:05:41 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,13 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 // 	char str1[] = "Haola";
 // 	char str2[] = "Hbola";
 
-// 	int resultado = ft_memcmp(str1, str2, 4);
+// 	int result = ft_memcmp(str1, str2, 4);
 
-// 	if (resultado == 0)
+// 	if (result == 0)
 // 	{
 // 		printf("Son iguales.\n");
 // 	}
-// 	else if (resultado < 0)
+// 	else if (result < 0)
 // 	{
 // 		printf("%d \n");
 // 	}

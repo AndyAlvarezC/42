@@ -6,7 +6,7 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 20:59:16 by andalvar          #+#    #+#             */
-/*   Updated: 2023/10/20 20:48:11 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/21 20:57:53 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,16 @@ char	*ft_strchr(const char *s, int c)
 
 // int main() {
 //     const char *s = "Hello, World!";
-//     int character = 'o';
+//     char c = 'o';
 
-//     char *result = ft_strchr(s, character);
+//     char *result = ft_strchr(s, c);
 
-//     if (result) {
-//         printf("Se a encontrado '%c' en la cadena: %s\n", character, result);
-//     } else {
-//         printf("No encontrado'%c'\n", character);
+//     if (result) 
+// 	{
+//         printf("Se a encontrado '%c' en la pos: %s\n", c, result);
+//     } else 
+// 	{
+//         printf("No encontrado'%c'\n", c);
 //     }
 
 //     return (0);

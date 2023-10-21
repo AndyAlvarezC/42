@@ -6,7 +6,7 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 18:51:31 by andalvar          #+#    #+#             */
-/*   Updated: 2023/10/21 18:51:05 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/21 20:32:23 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,8 @@ void	*ft_memset(void *b, int c, size_t len)
 
 // int main()
 // {
-//     char buf[] = "Hola";
+//     char b[] = "Hola";
 
-//     ft_memset(buf, 'u', 13);
-//     printf("Buffer: %s\n", buf);
-
+//     printf("%s\n", ft_memset(b, 'o', 12));
 //     return (0);
 // }

@@ -6,7 +6,7 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 17:03:46 by andalvar          #+#    #+#             */
-/*   Updated: 2023/10/21 19:31:37 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/21 21:36:00 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,15 +40,14 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 
 // int	main(void)
 // {
-// 	char src[] = "Hello World!";
-// 	unsigned int start = 5;
-// 	size_t len = 3;
-
-// 	char *sub = ft_substr(src, start, len);
+// 	char s1[10];
+// 	char *sub;
+// 	unsigned int n;
+// 	size_t len;
 
 // 	if (sub != NULL)
 // 	{
-// 		printf("%s\n", sub);
+// 		printf("%s\n", sub, ft_substr("Hello, World!", 5, 3));
 // 		free(sub);
 // 	}
 // 	return (0);

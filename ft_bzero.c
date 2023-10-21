@@ -6,7 +6,7 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 12:07:48 by andalvar          #+#    #+#             */
-/*   Updated: 2023/10/21 18:52:02 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/21 20:32:22 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ void	ft_bzero(void *s, size_t n)
 }
 
 // int main() {
-//     char buffer[10];
+//     char s1[10];
 
-//     ft_bzero(buffer, sizeof(buffer));
+//     ft_bzero(s1, sizeof(s1));
 
 //     return (0);
 // }

@@ -6,7 +6,7 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 12:06:47 by andalvar          #+#    #+#             */
-/*   Updated: 2023/10/21 19:26:39 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/21 21:11:12 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,7 @@ int	ft_atoi(const char *str)
 
 // int	main(void)
 // {
-// 	int i;
-// 	int a;
 // 	int num;
-
-// 	num = ft_atoi(" ---+--+423432fs78ab567");
-// 	printf("%d", num);
+	
+// 	printf("%d", ft_atoi(" ---+--+423432fs78ab567"));
 // }

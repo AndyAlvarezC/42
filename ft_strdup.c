@@ -6,13 +6,11 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 21:40:08 by andalvar          #+#    #+#             */
-/*   Updated: 2023/10/21 19:31:06 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/21 21:31:57 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-//#include "ft_strlen.c"
 
 char	*ft_strdup(const char *s1)
 {
@@ -33,14 +31,17 @@ char	*ft_strdup(const char *s1)
 }
 
 // int main() {
-// 	const char *original = "Hola, mundo!";
-// 	char *copia = ft_strdup(original);
+// 	const char *s1 = "Hola, mundo!";
+// 	char *s2 = ft_strdup(s1);
 
-// 	if (copia != NULL) {
-// 		printf("Copia: %s\n", copia);
-// 		free(copia);
-// 	} else {
-// 		printf("No se pudo duplicar la cadena.\n");
+// 	if (s2 != NULL) 
+// 	{
+// 		printf("Copia: %s\n", s2);
+// 		free(s2);
+// 	} 
+// 	else 
+// 	{
+// 		printf("Nah\n");
 // 	}
 // 	return (0);
 // }

@@ -6,7 +6,7 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 19:41:13 by andalvar          #+#    #+#             */
-/*   Updated: 2023/10/21 19:34:55 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/21 21:39:30 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,14 @@ char	*ft_strtrim(const char *s1, const char *set)
 }
 
 // int main() {
-//     char original[] = "   This is a test string.   ";
+//     char original[] = "	Hell o, Wo rld!	";
 //     char set[] = " \t\n";
 
 //     char *trimmed = ft_strtrim(original, set);
 
-//     if (trimmed) {
-//         printf("Cadena recortada: \"%s\"\n", trimmed);
+//     if (trimmed) 
+// 	{
+//         printf("\"%s\"\n", trimmed);
 //         free(trimmed);
 //     }
 //     return (0);

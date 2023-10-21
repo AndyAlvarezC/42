@@ -6,7 +6,7 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 18:46:14 by andalvar          #+#    #+#             */
-/*   Updated: 2023/09/13 18:46:14 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/21 20:32:24 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ int	ft_isprint(int c)
 
 // int main()
 // {
-//     printf("Caracter: %d", ft_isprint('f'));
+//     printf("%d", ft_isprint('f'));
 // }

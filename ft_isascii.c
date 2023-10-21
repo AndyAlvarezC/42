@@ -6,7 +6,7 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 18:41:04 by andalvar          #+#    #+#             */
-/*   Updated: 2023/10/21 18:45:16 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/21 20:22:59 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ int	ft_isascii(int c)
 
 // int main()
 // {
-//     printf("Caracter: %d", ft_isascii('s'));
+//     printf("%d", ft_isascii('s'));
 // }

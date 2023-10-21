@@ -6,7 +6,7 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 19:25:11 by andalvar          #+#    #+#             */
-/*   Updated: 2023/10/21 19:34:56 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/21 21:37:38 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,15 +42,17 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 // int main()
 // {
-//     char *s1 = "Hola, ";
-//     char *s2 = "mundo!";
+//     char *s1 = "Hello, ";
+//     char *s2 = "World!";
 //     char *result = ft_strjoin(s1, s2);
 
-//     if (result != NULL) {
+//     if (result != NULL) 
+// 	{
 //         printf("%s\n", result);
 //         free(result);
-//     } else {
-//         printf("Error en ft_strjoin: no se pudo asignar memoria.\n");
+//     } else 
+// 	{
+//         printf("Error\n");
 //     }
 
 //     return (0);

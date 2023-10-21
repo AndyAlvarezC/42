@@ -6,7 +6,7 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 18:36:10 by andalvar          #+#    #+#             */
-/*   Updated: 2023/10/21 18:43:23 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/21 20:22:58 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ int	ft_isdigit(int c)
 
 // int	main(void)
 // {
-// 	printf("Caracter: %d", ft_isdigit('2'));
+// 	printf("%d", ft_isdigit('2'));
 // }

@@ -6,7 +6,7 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 14:22:03 by andalvar          #+#    #+#             */
-/*   Updated: 2023/10/21 19:26:15 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/21 21:09:13 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 }
 
 // int main () {
-//     const char haystack[20] = "TutorialsPoin";
-//     const char find[10] = "to";
+//     const char haystack[20] = "Hellow, World!";
+//     const char find[10] = "o";
 //     char *result;
 
 //     result = ft_strnstr(haystack, find, 4);
