@@ -6,61 +6,62 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 20:53:12 by andalvar          #+#    #+#             */
-/*   Updated: 2023/10/20 21:24:53 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/21 01:10:47 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static unsigned int	ft_size(int num)
+static char	*ft_char(char *s, unsigned int num, long int len)
 {
-	unsigned int	len;
+	while (num > 0)
+	{
+		s[len--] = 48 + (num % 10);
+		num = num / 10;
+	}
+	return (s);
+}
+
+static long int	ft_size(int n)
+{
+	int	len;
 
 	len = 0;
-	if (num == 0)
-		return (1);
-	if (num < 0)
-		len += 1;
-	while (num != 0)
+	if (n <= 0)
+		len = 1;
+	while (n != 0)
 	{
-		num /= 10;
 		len++;
+		n = n / 10;
 	}
 	return (len);
 }
 
-char	*ft_cadena(char *str, int num, int len)
-{
-	while (num != 0)
-	{
-		str[len - 1] = (num % 10) + '0';
-		num = num / 10;
-		len--;
-	}
-	return (str);
-}
-
 char	*ft_itoa(int n)
 {
-	char			*str;
-	int				num;
-	unsigned int	len;
+	char				*s;
+	long int			len;
+	unsigned int		num;
+	int					sign;
 
-	num = 0;
+	sign = 1;
 	len = ft_size(n);
-	str = (char *)malloc(sizeof(char) * (len + 1));
-	if (str == NULL)
+	s = (char *)malloc(sizeof(char) * (len + 1));
+	if (!(s))
 		return (NULL);
-	if (num < 0)
+	s[len--] = '\0';
+	if (n == 0)
+		s[0] = '0';
+	if (n < 0)
 	{
-		str[0] = '-';
-		num = -n;
+		sign *= -1;
+		num = n * -1;
+		s[0] = '-';
 	}
 	else
 		num = n;
-	str[len] = '\0';
-	str = ft_cadena(str, num, len);
-	return (str);
+	s = ft_char(s, num, len);
+	return (s);
 }
 
 // int	main(void)

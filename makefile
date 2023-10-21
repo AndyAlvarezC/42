@@ -21,6 +21,7 @@ SRC =	ft_bzero.c ft_calloc.c ft_atoi.c ft_itoa.c ft_putstr_fd.c ft_putchar_fd.c 
 OBJ = $(SRC:.c=.o)
 INCLUDE = libft.h
 
+
 all: $(NAME)
 
 $(NAME): $(OBJ) $(INCLUDE)

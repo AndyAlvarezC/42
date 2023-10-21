@@ -6,7 +6,7 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 14:22:03 by andalvar          #+#    #+#             */
-/*   Updated: 2023/09/18 14:22:03 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/10/20 23:04:59 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,12 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 	i = ft_strlen((char *)to_find);
 	if (!*to_find)
 		return ((char *)str);
-	while (*str && i <= n--)
+	while (*str && i <= n)
 	{
-		if (!(ft_strncmp((char *)str, (char *)to_find, n)))
+		if (!(ft_strncmp((char *)str, (char *)to_find, i)))
 			return ((char *)str);
 		str++;
+		n--;
 	}
 	return (0);
 }
