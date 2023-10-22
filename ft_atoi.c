@@ -40,6 +40,6 @@ int	ft_atoi(const char *str)
 // int	main(void)
 // {
 // 	int num;
-	
+
 // 	printf("%d", ft_atoi(" ---+--+423432fs78ab567"));
 // }

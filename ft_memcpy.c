@@ -32,7 +32,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 // {
 //     char src[] = "Hola";
 //     char dst[10];
-	
+
 //     printf("%s\n", ft_memcpy(dst, src, 3));
 
 //     return (0);
