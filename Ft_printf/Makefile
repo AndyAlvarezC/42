@@ -17,7 +17,7 @@ CC = gcc
 CCFLAGS = -Wall -Wextra -Werror
 
 NAME = libftprintf.a
-SRC = ft_bzero.c ft_calloc.c ft_hexa.c ft_itoa_base.c ft_len.c ft_printf.c ft_ptr.c ft_putchar.c ft_putnbr.c ft_putstr.c ft_putunbr.c ft_strlen.c
+SRC = ft_hexamay.c ft_hexamin.c ft_itoa_base.c ft_por.c ft_printf.c ft_ptr.c ft_putchar.c ft_putnbr.c ft_putstr.c ft_putunbr.c
 OBJ = $(SRC:.c=.o)
 INCLUDE = libftprintf.h Makefile
 

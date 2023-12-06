@@ -6,11 +6,68 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 20:17:48 by andalvar          #+#    #+#             */
-/*   Updated: 2023/11/21 21:08:55 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/11/24 18:58:39 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
+
+void	ft_bzero(void *s, size_t n)
+{
+	size_t			i;
+	unsigned char	*p;
+
+	p = s;
+	i = 0;
+	while (i < n)
+	{
+		p[i] = 0;
+		i++;
+	}
+}
+
+void	*ft_calloc(size_t count, size_t size)
+{
+	void	*result;
+
+	result = malloc(count * size);
+	if (!result)
+	{
+		return (NULL);
+	}
+	else
+	{
+		ft_bzero(result, (count * size));
+		return (result);
+	}
+}
+
+size_t	ft_strlen(const char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+
+size_t	ft_len(unsigned long long n, char *base)
+{
+	size_t				len;
+	unsigned long long	base_len;
+
+	len = 1;
+	base_len = ft_strlen(base);
+	while (n >= base_len)
+	{
+		n /= base_len;
+		len++;
+	}
+	return (len);
+}
 
 char	*ft_itoa_base(unsigned long long n, char *base)
 {

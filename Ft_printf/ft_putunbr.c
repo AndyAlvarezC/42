@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_uint.c                                          :+:      :+:    :+:   */
+/*   ft_putunbr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 20:48:32 by andalvar          #+#    #+#             */
-/*   Updated: 2023/11/09 20:48:32 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/11/24 18:58:58 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_putunbr(unsigned int n)
+int	ft_putunbr(unsigned long n)
 {
-	if (n >= 10)
-	{
-		ft_putnbr(n / 10);
-		n = n % 10;
-	}
-	if (n < 10)
-	{
-		ft_putchar(n + 48);
-	}
+	int		i;
+	char	*str;
+
+	i = 0;
+	str = ft_itoa_base(n, "0123456789");
+	i = ft_putstr(str);
+	free(str);
+	return (i);
 }

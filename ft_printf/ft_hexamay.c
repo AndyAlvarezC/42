@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_len.c                                           :+:      :+:    :+:   */
+/*   ft_hexamay.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/21 20:21:15 by andalvar          #+#    #+#             */
-/*   Updated: 2023/11/21 20:21:15 by andalvar         ###   ########.fr       */
+/*   Created: 2023/11/22 18:39:34 by andalvar          #+#    #+#             */
+/*   Updated: 2023/11/24 18:58:45 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-size_t	ft_len(unsigned long long n, char *base)
+int	ft_hexamay(unsigned int n)
 {
-	size_t				len;
-	unsigned long long	base_len;
+	int		i;
+	char	*str;
 
-	len = 1;
-	base_len = ft_strlen(base);
-	while (n >= base_len)
-	{
-		n /= base_len;
-		len++;
-	}
-	return (len);
+	i = 0;
+	str = ft_itoa_base(n, "0123456789ABCDEF");
+	i = ft_putstr(str);
+	free(str);
+	return (i);
 }

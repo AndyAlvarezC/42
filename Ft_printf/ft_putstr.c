@@ -12,16 +12,17 @@
 
 #include "libftprintf.h"
 
-void	ft_putstr(char *s)
+int	ft_putstr(char *s)
 {
 	int	i;
 
 	i = 0;
 	if (!s)
-		return ;
-	while (s[i] != '\0')
+		return (0);
+	while (s[i])
 	{
-		write(1, &s, 1);
+		write(1, &s[i], 1);
 		i++;
 	}
+	return (i);
 }

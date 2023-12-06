@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/21 20:21:46 by andalvar          #+#    #+#             */
-/*   Updated: 2023/11/21 20:21:46 by andalvar         ###   ########.fr       */
+/*   Created: 2023/11/28 14:14:04 by andalvar          #+#    #+#             */
+/*   Updated: 2023/11/28 14:14:04 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "get_next_line.h"
 
-size_t	ft_strlen(const char *s)
+char *get_next_line(int fd)
 {
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+    
 }
+

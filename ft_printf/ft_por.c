@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_por.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/21 20:22:40 by andalvar          #+#    #+#             */
-/*   Updated: 2023/11/21 20:22:40 by andalvar         ###   ########.fr       */
+/*   Created: 2023/11/22 18:23:43 by andalvar          #+#    #+#             */
+/*   Updated: 2023/11/24 18:58:37 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_por(void)
 {
-	size_t			i;
-	unsigned char	*p;
-
-	p = s;
-	i = 0;
-	while (i < n)
-	{
-		p[i] = 0;
-		i++;
-	}
+	write(1, "%", 1);
+	return (1);
 }

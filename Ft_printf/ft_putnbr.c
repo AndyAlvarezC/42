@@ -6,33 +6,42 @@
 /*   By: andalvar <andalvar@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 00:10:01 by andalvar          #+#    #+#             */
-/*   Updated: 2023/11/21 21:08:51 by andalvar         ###   ########.fr       */
+/*   Updated: 2023/11/24 18:58:15 by andalvar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_putnbr(int n)
+static int	ft_negative(int *value)
 {
-	if (n == -2147483648)
+	int	i;
+
+	i = 0;
+	if (*value == INT_MIN)
 	{
+		i = 1;
 		ft_putchar('-');
 		ft_putchar('2');
-		ft_putnbr(147483648);
-		return ;
+		*value = 147483648;
+		i++;
 	}
-	if (n < 0)
+	else if (*value < 0)
 	{
 		ft_putchar('-');
-		n = -n;
+		*value *= -1;
+		i++;
 	}
-	if (n >= 10)
-	{
-		ft_putnbr(n / 10);
-		n = n % 10;
-	}
-	if (n < 10)
-	{
-		ft_putchar(n + 48);
-	}
+	return (i);
+}
+
+int	ft_putnbr(int n)
+{
+	int		i;
+	char	*str;
+
+	i = ft_negative(&n);
+	str = ft_itoa_base(n, "0123456789");
+	i = ft_putstr(str);
+	free(str);
+	return (i);
 }
